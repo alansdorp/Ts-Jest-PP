@@ -26,6 +26,8 @@ describe("Test on ej1 component", () => {
     const instance = new TaskManager();
     instance.addTask("test task");
     instance.markTaskAsCompleted(0);
+    const tasksCompleted = instance.getTasks()[0];
+    expect(tasksCompleted).toEqual("[Completada] test task")
   });
   test("Should complete a task and clear completed tasks", async () => {
     const instance = new TaskManager();
